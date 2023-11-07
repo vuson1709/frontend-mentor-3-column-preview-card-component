@@ -1,0 +1,147 @@
+:root {
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  /* paragraph */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* background, headings, buttons */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--very-light-gray);
+  height: 100%;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  margin-bottom: 20px;
+}
+
+p {
+  color: var(--transparent-white);
+  margin-bottom: 60px;
+  margin-right: 20px;
+  line-height: 1.7;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  padding: 50px 40px;
+  flex-basis: 300px;
+}
+
+.sedans {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+button {
+  background-color: var(--very-light-gray);
+  border: 1px solid #fff;
+  padding: 20px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.sedans button {
+  color: var(--bright-orange);
+}
+
+.suvs button {
+  color: var(--dark-cyan);
+}
+
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+
+button:hover,
+button:active {
+  background-color: inherit;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    margin: 40px 0;
+    height: 100%;
+  }
+
+  .sedans {
+    border-radius: unset;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .luxury {
+    border-radius: unset;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  p {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+
+  button {
+    padding: 15px 30px;
+  }
+
+  footer {
+    position: relative;
+  }
+}
